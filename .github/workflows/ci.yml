@@ -47,7 +47,9 @@ jobs:
         uses: dorny/test-reporter@v1
         with:
           name: Test Report
-          path: "Practica6Alumnos/target/*-reports/*.xml"
+          path: |
+              Practica6Alumnos/target/surefire-reports/TEST-*.xml
+              Practica6Alumnos/target/failsafe-reports/TEST-*.xml
           reporter: java-junit
           fail-on-empty: false
 
