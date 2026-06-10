@@ -20,7 +20,7 @@ jobs:
     defaults:
       run:
         working-directory: Practica6Alumnos
-        
+
 
     steps:
       - name: Checkout repository
@@ -48,8 +48,8 @@ jobs:
         with:
           name: Test Report
           path: |
-            target/surefire-reports/*.xml
-            target/failsafe-reports/*.xml
+            Practica6Alumnostarget/surefire-reports/*.xml
+            Practica6Alumnostarget/failsafe-reports/*.xml
           reporter: java-junit
 
       - name: Upload XML reports
@@ -58,8 +58,8 @@ jobs:
         with:
           name: xml-test-reports
           path: |
-            target/surefire-reports/
-            target/failsafe-reports/
+            Practica6Alumnostarget/surefire-reports/
+            Practica6Alumnostarget/failsafe-reports/
           retention-days: 7
 
       - name: Upload JaCoCo coverage report
