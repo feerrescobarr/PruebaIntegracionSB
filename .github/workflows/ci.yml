@@ -48,8 +48,8 @@ jobs:
         with:
           name: Test Report
           path: |
-            Practica6Alumnostarget/surefire-reports/*.xml
-            Practica6Alumnostarget/failsafe-reports/*.xml
+            Practica6Alumnos/target/surefire-reports/*.xml
+            Practica6Alumnos/target/failsafe-reports/*.xml
           reporter: java-junit
 
       - name: Upload XML reports
@@ -58,8 +58,8 @@ jobs:
         with:
           name: xml-test-reports
           path: |
-            Practica6Alumnostarget/surefire-reports/
-            Practica6Alumnostarget/failsafe-reports/
+            Practica6Alumnos/target/surefire-reports/
+            Practica6Alumnos/target/failsafe-reports/
           retention-days: 7
 
       - name: Upload JaCoCo coverage report
@@ -67,5 +67,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-coverage-report
-          path: target/site/jacoco/
+          path: Practica6Alumnos/target/site/jacoco/
           retention-days: 7
